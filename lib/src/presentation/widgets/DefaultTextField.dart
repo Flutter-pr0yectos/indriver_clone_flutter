@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 
 class DefaultTextField extends StatelessWidget {
+
+  final Function(String text) onChanged;
   final String text;
   final IconData icon;
   final EdgeInsetsGeometry margin;
 
-  const DefaultTextField({super.key, 
+  const DefaultTextField({
+    super.key, 
+    required this.onChanged,
     required this.text,
     required this.icon,
     this.margin = const EdgeInsets.only(top: 50, left: 20, right: 20),
@@ -24,6 +28,9 @@ class DefaultTextField extends StatelessWidget {
         ),
       ),
       child: TextFormField(
+        onChanged: (text){
+          onChanged(text);
+        },
         decoration: InputDecoration(
           label: Text(text),
           border: InputBorder.none,

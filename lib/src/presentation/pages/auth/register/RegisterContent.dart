@@ -45,8 +45,8 @@ class RegisterContent extends StatelessWidget {
               begin: Alignment.topRight,
               end: Alignment.bottomLeft,
               colors: [
-                const Color.fromARGB(255, 236, 233, 242),
-                const Color.fromARGB(255, 245, 245, 245),
+                Color.fromARGB(255, 14, 29, 166),
+                Color.fromARGB(255, 30, 112, 227)
               ]
             )
           ),
@@ -88,6 +88,9 @@ class RegisterContent extends StatelessWidget {
                       margin: EdgeInsets.only(left: 50, right: 50, top: 15),
                     ),
                     DefaultButton(
+                      onPressed: () {
+                        
+                      },
                       text: 'Crear usuario',
                       margin: EdgeInsets.only(top: 30, left: 60, right: 60),
                     ),
@@ -124,7 +127,7 @@ class RegisterContent extends StatelessWidget {
         Text(
           'Ya tienes cuenta',
           style: TextStyle(
-            color: Colors.grey,
+            color: Colors.white,
             fontSize: 16
           ),
         ),
@@ -136,7 +139,7 @@ class RegisterContent extends StatelessWidget {
           child: Text(
             'Inicia sesion',
             style: TextStyle(
-              color: Colors.grey[900],
+              color: Colors.grey[100],
               fontWeight: FontWeight.bold,
               fontSize: 16
             ),
